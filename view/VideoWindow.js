@@ -5,9 +5,9 @@
 * http://www.sencha.com/license
 */
 
-// From code originally written by David Davis (http://www.sencha.com/blog/html5-video-canvas-and-ext-js/)
+// From code originally written by David Davis (http://www.sencha.com/blog/html5-video-canvas-and-ext-core/)
 
-Ext.define('MyDesktop.VideoWindow', {
+Ext.define('MyDesktop.view.VideoWindow', {
     extend: 'Ext.ux.desktop.Module',
 
     uses: [

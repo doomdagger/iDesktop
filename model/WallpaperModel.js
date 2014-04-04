@@ -5,7 +5,7 @@
  * http://www.sencha.com/license
  */
 
-Ext.define('MyDesktop.WallpaperModel', {
+Ext.define('MyDesktop.model.WallpaperModel', {
     extend: 'Ext.data.Model',
     fields: [
         { name: 'text' },

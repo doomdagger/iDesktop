@@ -13,19 +13,18 @@ Ext.define('MyDesktop.App', {
 
         'Ext.ux.desktop.ShortcutModel',
 
-        'MyDesktop.SystemStatus',
-        'MyDesktop.VideoWindow',
-        'MyDesktop.GridWindow',
-        'MyDesktop.TabWindow',
-        'MyDesktop.AccordionWindow',
-        'MyDesktop.Notepad',
-        'MyDesktop.BogusMenuModule',
-        'MyDesktop.BogusModule',
+        'MyDesktop.view.SystemStatus',
+        'MyDesktop.view.VideoWindow',
+        'MyDesktop.view.GridWindow',
+        'MyDesktop.view.TabWindow',
+        'MyDesktop.view.AccordionWindow',
+        'MyDesktop.view.Notepad',
+        'MyDesktop.view.BogusMenuModule',
+        'MyDesktop.view.BogusModule',
 
         //my ext
         'MyDesktop.view.SysSettingView',
-//      'MyDesktop.Blockalanche',
-        'MyDesktop.Settings'
+        'MyDesktop.view.Settings'
     ],
 
     init: function() {
@@ -42,15 +41,14 @@ Ext.define('MyDesktop.App', {
 
     getModules : function(){
         return [
-            new MyDesktop.VideoWindow(),
-            //new MyDesktop.Blockalanche(),
-            new MyDesktop.SystemStatus(),
-            new MyDesktop.GridWindow(),
-            new MyDesktop.TabWindow(),
-            new MyDesktop.AccordionWindow(),
-            new MyDesktop.Notepad(),
-            new MyDesktop.BogusMenuModule(),
-            new MyDesktop.BogusModule(),
+            new MyDesktop.view.VideoWindow(),
+            new MyDesktop.view.SystemStatus(),
+            new MyDesktop.view.GridWindow(),
+            new MyDesktop.view.TabWindow(),
+            new MyDesktop.view.AccordionWindow(),
+            new MyDesktop.view.Notepad(),
+            new MyDesktop.view.BogusMenuModule(),
+            new MyDesktop.view.BogusModule(),
             
             //my ext
             new MyDesktop.view.SysSettingView()
@@ -125,7 +123,9 @@ Ext.define('MyDesktop.App', {
                 { name: '表格窗口', iconCls: 'icon-grid', module: 'grid-win' }
             ],
             trayItems: [
-                { xtype: 'trayclock', flex: 1 }
+                { name: '表格窗口', iconCls: 'icon-grid' },
+                { name: '表格窗口', iconCls: 'accordion' },
+                { xtype: 'trayclock', flex: 1 },
             ]
         });
     },
@@ -135,7 +135,7 @@ Ext.define('MyDesktop.App', {
     },
 
     onSettings: function () {
-        var dlg = new MyDesktop.Settings({
+        var dlg = new MyDesktop.view.Settings({
             desktop: this.desktop
         });
         dlg.show();

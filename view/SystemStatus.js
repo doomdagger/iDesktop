@@ -5,7 +5,7 @@
 * http://www.sencha.com/license
 */
 
-Ext.define('MyDesktop.SystemStatus', {
+Ext.define('MyDesktop.view.SystemStatus', {
     extend: 'Ext.ux.desktop.Module',
 
     requires: [

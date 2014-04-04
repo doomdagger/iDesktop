@@ -1,4 +1,5 @@
 iDesktop
 ========
 
-Based on ExtJS, use the basic Ext.ux.Desktop, extend it, refine it.
+> Based on ExtJS, use the basic Ext.ux.Desktop, extend it, refine it.
+

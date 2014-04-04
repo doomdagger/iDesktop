@@ -4,1112 +4,1112 @@
     "builds": [
         {
             "name": "All Dependencies",
-            "target": "all-classes.js",
+            "target": "all-classes.core",
             "compress": true,
             "files": [
                 {
                     "path": "../../../platform/src/util/",
-                    "name": "Observable.js"
+                    "name": "Observable.core"
                 },
                 {
-                    "path": "js/",
-                    "name": "Module.js"
-                },
-                {
-                    "path": "../../../platform/src/chart/",
-                    "name": "Callout.js"
+                    "path": "core/",
+                    "name": "Module.core"
                 },
                 {
                     "path": "../../../platform/src/chart/",
-                    "name": "Navigation.js"
+                    "name": "Callout.core"
                 },
                 {
                     "path": "../../../platform/src/chart/",
-                    "name": "Shape.js"
+                    "name": "Navigation.core"
+                },
+                {
+                    "path": "../../../platform/src/chart/",
+                    "name": "Shape.core"
                 },
                 {
                     "path": "../../src/form/field/",
-                    "name": "VTypes.js"
+                    "name": "VTypes.core"
                 },
                 {
                     "path": "../../src/util/",
-                    "name": "ClickRepeater.js"
+                    "name": "ClickRepeater.core"
                 },
                 {
                     "path": "../../src/util/",
-                    "name": "TextMetrics.js"
+                    "name": "TextMetrics.core"
                 },
                 {
                     "path": "../../src/util/",
-                    "name": "KeyMap.js"
+                    "name": "KeyMap.core"
                 },
                 {
                     "path": "../../../platform/src/",
-                    "name": "Template.js"
+                    "name": "Template.core"
                 },
                 {
                     "path": "../../../platform/src/data/",
-                    "name": "IdGenerator.js"
+                    "name": "IdGenerator.core"
                 },
                 {
                     "path": "../../../platform/src/data/",
-                    "name": "Operation.js"
+                    "name": "Operation.core"
                 },
                 {
                     "path": "../../../platform/src/data/",
-                    "name": "validations.js"
+                    "name": "validations.core"
                 },
                 {
                     "path": "../../../platform/src/util/",
-                    "name": "Bindable.js"
+                    "name": "Bindable.core"
                 },
                 {
                     "path": "../../../platform/src/draw/",
-                    "name": "Color.js"
+                    "name": "Color.core"
                 },
                 {
                     "path": "../../../platform/src/draw/",
-                    "name": "Draw.js"
+                    "name": "Draw.core"
                 },
                 {
                     "path": "../../../platform/src/util/",
-                    "name": "Sorter.js"
+                    "name": "Sorter.core"
                 },
                 {
                     "path": "../../../platform/src/data/",
-                    "name": "Tree.js"
+                    "name": "Tree.core"
                 },
                 {
                     "path": "../../src/form/field/",
-                    "name": "Field.js"
+                    "name": "Field.core"
                 },
                 {
                     "path": "../../../platform/src/util/",
-                    "name": "Memento.js"
+                    "name": "Memento.core"
                 },
                 {
                     "path": "../../src/dd/",
-                    "name": "DragTracker.js"
+                    "name": "DragTracker.core"
                 },
                 {
                     "path": "../../../platform/src/util/",
-                    "name": "Offset.js"
+                    "name": "Offset.core"
                 },
                 {
                     "path": "../../src/util/",
-                    "name": "Floating.js"
+                    "name": "Floating.core"
                 },
                 {
                     "path": "../../../platform/src/util/",
-                    "name": "ElementContainer.js"
+                    "name": "ElementContainer.core"
                 },
                 {
                     "path": "../../src/layout/container/boxOverflow/",
-                    "name": "None.js"
+                    "name": "None.core"
                 },
                 {
                     "path": "../../src/layout/container/boxOverflow/",
-                    "name": "Scroller.js"
+                    "name": "Scroller.core"
                 },
                 {
                     "path": "../../../platform/src/data/association/",
-                    "name": "Association.js"
+                    "name": "Association.core"
                 },
                 {
                     "path": "../../../platform/src/data/",
-                    "name": "SortTypes.js"
+                    "name": "SortTypes.core"
                 },
                 {
                     "path": "../../../platform/src/util/",
-                    "name": "Sortable.js"
+                    "name": "Sortable.core"
                 },
                 {
                     "path": "../../../platform/src/fx/",
-                    "name": "CubicBezier.js"
+                    "name": "CubicBezier.core"
                 },
                 {
                     "path": "../../../platform/src/fx/",
-                    "name": "PropertyHandler.js"
+                    "name": "PropertyHandler.core"
                 },
                 {
                     "path": "../../src/util/",
-                    "name": "Animate.js"
+                    "name": "Animate.core"
                 },
                 {
                     "path": "../../src/util/",
-                    "name": "KeyNav.js"
+                    "name": "KeyNav.core"
                 },
                 {
                     "path": "../../../platform/src/data/proxy/",
-                    "name": "Proxy.js"
+                    "name": "Proxy.core"
                 },
                 {
                     "path": "../../../platform/src/util/",
-                    "name": "Filter.js"
+                    "name": "Filter.core"
                 },
                 {
                     "path": "../../src/",
-                    "name": "ZIndexManager.js"
+                    "name": "ZIndexManager.core"
                 },
                 {
                     "path": "../../src/panel/",
-                    "name": "Proxy.js"
+                    "name": "Proxy.core"
                 },
                 {
                     "path": "../../../platform/src/",
-                    "name": "XTemplateParser.js"
+                    "name": "XTemplateParser.core"
                 },
                 {
                     "path": "../../../platform/src/util/",
-                    "name": "Renderable.js"
+                    "name": "Renderable.core"
                 },
                 {
                     "path": "../../../platform/src/",
-                    "name": "ComponentQuery.js"
+                    "name": "ComponentQuery.core"
                 },
                 {
                     "path": "../../../platform/src/util/",
-                    "name": "ProtoElement.js"
+                    "name": "ProtoElement.core"
                 },
                 {
                     "path": "../../../platform/src/util/",
-                    "name": "HashMap.js"
+                    "name": "HashMap.core"
                 },
                 {
                     "path": "../../../platform/src/fx/",
-                    "name": "Queue.js"
+                    "name": "Queue.core"
                 },
                 {
                     "path": "../../../platform/src/data/proxy/",
-                    "name": "Server.js"
+                    "name": "Server.core"
                 },
                 {
                     "path": "../../../platform/src/data/writer/",
-                    "name": "Writer.js"
+                    "name": "Writer.core"
                 },
                 {
                     "path": "../../../platform/src/fx/target/",
-                    "name": "Target.js"
+                    "name": "Target.core"
                 },
                 {
                     "path": "../../../platform/src/data/",
-                    "name": "Connection.js"
+                    "name": "Connection.core"
                 },
                 {
                     "path": "../../../platform/src/data/",
-                    "name": "ResultSet.js"
+                    "name": "ResultSet.core"
                 },
                 {
                     "path": "../../../platform/src/state/",
-                    "name": "Provider.js"
+                    "name": "Provider.core"
                 },
                 {
                     "path": "../../src/dd/",
-                    "name": "Registry.js"
+                    "name": "Registry.core"
                 },
                 {
                     "path": "",
-                    "name": "VideoWindow.js"
+                    "name": "VideoWindow.core"
                 },
                 {
                     "path": "",
-                    "name": "BogusModule.js"
+                    "name": "BogusModule.core"
                 },
                 {
                     "path": "",
-                    "name": "BogusMenuModule.js"
+                    "name": "BogusMenuModule.core"
                 },
                 {
                     "path": "../../../platform/src/chart/",
-                    "name": "Label.js"
+                    "name": "Label.core"
                 },
                 {
                     "path": "../../../platform/src/chart/theme/",
-                    "name": "Theme.js"
+                    "name": "Theme.core"
                 },
                 {
                     "path": "../../../platform/src/chart/theme/",
-                    "name": "Base.js"
+                    "name": "Base.core"
                 },
                 {
                     "path": "../../src/util/",
-                    "name": "ComponentDragger.js"
+                    "name": "ComponentDragger.core"
                 },
                 {
                     "path": "../../../platform/src/util/",
-                    "name": "Region.js"
+                    "name": "Region.core"
                 },
                 {
                     "path": "../../../platform/src/",
-                    "name": "XTemplateCompiler.js"
+                    "name": "XTemplateCompiler.core"
                 },
                 {
                     "path": "../../../platform/src/",
-                    "name": "XTemplate.js"
+                    "name": "XTemplate.core"
                 },
                 {
                     "path": "../../src/form/",
-                    "name": "Labelable.js"
+                    "name": "Labelable.core"
                 },
                 {
                     "path": "../../../platform/src/layout/",
-                    "name": "Layout.js"
+                    "name": "Layout.core"
                 },
                 {
                     "path": "../../src/layout/container/",
-                    "name": "Container.js"
+                    "name": "Container.core"
                 },
                 {
                     "path": "../../src/layout/container/",
-                    "name": "Anchor.js"
+                    "name": "Anchor.core"
                 },
                 {
                     "path": "../../src/dd/",
-                    "name": "DragDropManager.js"
+                    "name": "DragDropManager.core"
                 },
                 {
                     "path": "../../../platform/src/",
-                    "name": "AbstractManager.js"
+                    "name": "AbstractManager.core"
                 },
                 {
                     "path": "../../../platform/src/",
-                    "name": "ModelManager.js"
+                    "name": "ModelManager.core"
                 },
                 {
                     "path": "../../../platform/src/data/",
-                    "name": "Types.js"
+                    "name": "Types.core"
                 },
                 {
                     "path": "../../../platform/src/data/",
-                    "name": "Field.js"
+                    "name": "Field.core"
                 },
                 {
                     "path": "../../../platform/src/data/",
-                    "name": "NodeInterface.js"
+                    "name": "NodeInterface.core"
                 },
                 {
                     "path": "../../../platform/src/util/",
-                    "name": "AbstractMixedCollection.js"
+                    "name": "AbstractMixedCollection.core"
                 },
                 {
                     "path": "../../../platform/src/util/",
-                    "name": "MixedCollection.js"
+                    "name": "MixedCollection.core"
                 },
                 {
                     "path": "../../src/menu/",
-                    "name": "Manager.js"
+                    "name": "Manager.core"
                 },
                 {
                     "path": "../../../platform/src/data/",
-                    "name": "Errors.js"
+                    "name": "Errors.core"
                 },
                 {
                     "path": "../../../platform/src/data/",
-                    "name": "Model.js"
+                    "name": "Model.core"
                 },
                 {
                     "path": "../../../platform/src/data/",
-                    "name": "StoreManager.js"
+                    "name": "StoreManager.core"
                 },
                 {
                     "path": "../../../platform/src/draw/",
-                    "name": "CompositeSprite.js"
+                    "name": "CompositeSprite.core"
                 },
                 {
                     "path": "../../../platform/src/chart/",
-                    "name": "LegendItem.js"
+                    "name": "LegendItem.core"
                 },
                 {
                     "path": "../../../platform/src/chart/",
-                    "name": "Legend.js"
+                    "name": "Legend.core"
                 },
                 {
                     "path": "../../../platform/src/data/",
-                    "name": "AbstractStore.js"
+                    "name": "AbstractStore.core"
                 },
                 {
                     "path": "../../../platform/src/data/",
-                    "name": "TreeStore.js"
+                    "name": "TreeStore.core"
                 },
                 {
                     "path": "../../../platform/src/draw/",
-                    "name": "Surface.js"
+                    "name": "Surface.core"
                 },
                 {
                     "path": "../../../platform/src/fx/",
-                    "name": "Easing.js"
+                    "name": "Easing.core"
                 },
                 {
                     "path": "../../../platform/src/data/writer/",
-                    "name": "Json.js"
+                    "name": "Json.core"
                 },
                 {
                     "path": "../../../platform/src/util/",
-                    "name": "LruCache.js"
+                    "name": "LruCache.core"
                 },
                 {
                     "path": "../../../platform/src/data/proxy/",
-                    "name": "Client.js"
+                    "name": "Client.core"
                 },
                 {
                     "path": "../../../platform/src/data/proxy/",
-                    "name": "Memory.js"
+                    "name": "Memory.core"
                 },
                 {
                     "path": "../../src/layout/container/",
-                    "name": "Fit.js"
+                    "name": "Fit.core"
                 },
                 {
                     "path": "../../src/layout/container/",
-                    "name": "Card.js"
+                    "name": "Card.core"
                 },
                 {
                     "path": "../../../platform/src/layout/container/",
-                    "name": "Auto.js"
+                    "name": "Auto.core"
                 },
                 {
                     "path": "../../../platform/src/container/",
-                    "name": "DockingContainer.js"
+                    "name": "DockingContainer.core"
                 },
                 {
                     "path": "../../../platform/src/layout/component/",
-                    "name": "Component.js"
+                    "name": "Component.core"
                 },
                 {
                     "path": "../../src/layout/component/",
-                    "name": "Dock.js"
+                    "name": "Dock.core"
                 },
                 {
                     "path": "../../../platform/src/layout/component/",
-                    "name": "Auto.js"
+                    "name": "Auto.core"
                 },
                 {
                     "path": "../../src/layout/component/",
-                    "name": "Button.js"
+                    "name": "Button.core"
                 },
                 {
                     "path": "../../src/layout/component/",
-                    "name": "ProgressBar.js"
+                    "name": "ProgressBar.core"
                 },
                 {
                     "path": "../../src/layout/component/field/",
-                    "name": "Field.js"
+                    "name": "Field.core"
                 },
                 {
                     "path": "../../src/layout/component/field/",
-                    "name": "Text.js"
+                    "name": "Text.core"
                 },
                 {
                     "path": "../../src/layout/component/field/",
-                    "name": "TextArea.js"
+                    "name": "TextArea.core"
                 },
                 {
                     "path": "../../src/layout/component/field/",
-                    "name": "HtmlEditor.js"
+                    "name": "HtmlEditor.core"
                 },
                 {
                     "path": "../../../platform/src/layout/component/",
-                    "name": "Draw.js"
+                    "name": "Draw.core"
                 },
                 {
                     "path": "../../src/grid/",
-                    "name": "ColumnComponentLayout.js"
+                    "name": "ColumnComponentLayout.core"
                 },
                 {
                     "path": "../../../platform/src/",
-                    "name": "ComponentManager.js"
+                    "name": "ComponentManager.core"
                 },
                 {
                     "path": "../../../platform/src/fx/target/",
-                    "name": "Element.js"
+                    "name": "Element.core"
                 },
                 {
                     "path": "../../../platform/src/fx/target/",
-                    "name": "ElementCSS.js"
+                    "name": "ElementCSS.core"
                 },
                 {
                     "path": "../../../platform/src/fx/target/",
-                    "name": "CompositeElement.js"
+                    "name": "CompositeElement.core"
                 },
                 {
                     "path": "../../../platform/src/fx/target/",
-                    "name": "CompositeElementCSS.js"
+                    "name": "CompositeElementCSS.core"
                 },
                 {
                     "path": "../../../platform/src/fx/target/",
-                    "name": "Sprite.js"
+                    "name": "Sprite.core"
                 },
                 {
                     "path": "../../../platform/src/fx/target/",
-                    "name": "CompositeSprite.js"
+                    "name": "CompositeSprite.core"
                 },
                 {
                     "path": "../../../platform/src/fx/target/",
-                    "name": "Component.js"
+                    "name": "Component.core"
                 },
                 {
                     "path": "../../../platform/src/fx/",
-                    "name": "Manager.js"
+                    "name": "Manager.core"
                 },
                 {
                     "path": "../../../platform/src/fx/",
-                    "name": "Animator.js"
+                    "name": "Animator.core"
                 },
                 {
                     "path": "../../../platform/src/fx/",
-                    "name": "Anim.js"
+                    "name": "Anim.core"
                 },
                 {
                     "path": "../../../platform/src/chart/",
-                    "name": "Highlight.js"
+                    "name": "Highlight.core"
                 },
                 {
                     "path": "../../../platform/src/",
-                    "name": "Ajax.js"
+                    "name": "Ajax.core"
                 },
                 {
                     "path": "../../../platform/src/data/proxy/",
-                    "name": "Ajax.js"
+                    "name": "Ajax.core"
                 },
                 {
                     "path": "../../../platform/src/data/reader/",
-                    "name": "Reader.js"
+                    "name": "Reader.core"
                 },
                 {
                     "path": "../../../platform/src/data/reader/",
-                    "name": "Json.js"
+                    "name": "Json.core"
                 },
                 {
                     "path": "../../../platform/src/data/",
-                    "name": "Store.js"
+                    "name": "Store.core"
                 },
                 {
                     "path": "../../../platform/src/data/reader/",
-                    "name": "Array.js"
+                    "name": "Array.core"
                 },
                 {
                     "path": "../../../platform/src/data/",
-                    "name": "ArrayStore.js"
+                    "name": "ArrayStore.core"
                 },
                 {
                     "path": "../../../platform/src/data/",
-                    "name": "NodeStore.js"
+                    "name": "NodeStore.core"
                 },
                 {
                     "path": "../../src/grid/plugin/",
-                    "name": "HeaderResizer.js"
+                    "name": "HeaderResizer.core"
                 },
                 {
                     "path": "../../src/layout/component/",
-                    "name": "Tab.js"
+                    "name": "Tab.core"
                 },
                 {
                     "path": "../../../platform/src/selection/",
-                    "name": "Model.js"
+                    "name": "Model.core"
                 },
                 {
                     "path": "../../src/selection/",
-                    "name": "RowModel.js"
+                    "name": "RowModel.core"
                 },
                 {
                     "path": "../../src/selection/",
-                    "name": "TreeModel.js"
+                    "name": "TreeModel.core"
                 },
                 {
                     "path": "../../../platform/src/state/",
-                    "name": "Manager.js"
+                    "name": "Manager.core"
                 },
                 {
                     "path": "../../../platform/src/state/",
-                    "name": "Stateful.js"
+                    "name": "Stateful.core"
                 },
                 {
                     "path": "../../../platform/src/",
-                    "name": "AbstractComponent.js"
+                    "name": "AbstractComponent.core"
                 },
                 {
                     "path": "../../src/",
-                    "name": "Component.js"
+                    "name": "Component.core"
                 },
                 {
                     "path": "../../src/button/",
-                    "name": "Button.js"
+                    "name": "Button.core"
                 },
                 {
                     "path": "../../src/",
-                    "name": "ProgressBar.js"
+                    "name": "ProgressBar.core"
                 },
                 {
                     "path": "../../../platform/src/chart/",
-                    "name": "MaskLayer.js"
+                    "name": "MaskLayer.core"
                 },
                 {
                     "path": "../../../platform/src/chart/",
-                    "name": "Mask.js"
+                    "name": "Mask.core"
                 },
                 {
                     "path": "../../src/toolbar/",
-                    "name": "Spacer.js"
+                    "name": "Spacer.core"
                 },
                 {
                     "path": "../../src/toolbar/",
-                    "name": "Fill.js"
+                    "name": "Fill.core"
                 },
                 {
                     "path": "../../src/form/field/",
-                    "name": "Base.js"
+                    "name": "Base.core"
                 },
                 {
                     "path": "../../src/form/field/",
-                    "name": "Text.js"
+                    "name": "Text.core"
                 },
                 {
                     "path": "../../src/form/field/",
-                    "name": "TextArea.js"
+                    "name": "TextArea.core"
                 },
                 {
                     "path": "../../src/form/field/",
-                    "name": "Display.js"
+                    "name": "Display.core"
                 },
                 {
                     "path": "../../../platform/src/draw/",
-                    "name": "Component.js"
+                    "name": "Component.core"
                 },
                 {
                     "path": "../../../platform/src/chart/",
-                    "name": "Chart.js"
+                    "name": "Chart.core"
                 },
                 {
                     "path": "../../../platform/src/chart/",
-                    "name": "TipSurface.js"
+                    "name": "TipSurface.core"
                 },
                 {
                     "path": "../../../platform/src/chart/axis/",
-                    "name": "Abstract.js"
+                    "name": "Abstract.core"
                 },
                 {
                     "path": "../../../platform/src/chart/axis/",
-                    "name": "Axis.js"
+                    "name": "Axis.core"
                 },
                 {
                     "path": "../../../platform/src/chart/axis/",
-                    "name": "Category.js"
+                    "name": "Category.core"
                 },
                 {
                     "path": "../../../platform/src/chart/axis/",
-                    "name": "Gauge.js"
+                    "name": "Gauge.core"
                 },
                 {
                     "path": "../../../platform/src/chart/axis/",
-                    "name": "Numeric.js"
+                    "name": "Numeric.core"
                 },
                 {
                     "path": "../../../platform/src/chart/axis/",
-                    "name": "Radial.js"
+                    "name": "Radial.core"
                 },
                 {
                     "path": "../../../platform/src/chart/axis/",
-                    "name": "Time.js"
+                    "name": "Time.core"
                 },
                 {
                     "path": "../../src/picker/",
-                    "name": "Color.js"
+                    "name": "Color.core"
                 },
                 {
                     "path": "../../src/toolbar/",
-                    "name": "Item.js"
+                    "name": "Item.core"
                 },
                 {
                     "path": "../../../platform/src/container/",
-                    "name": "AbstractContainer.js"
+                    "name": "AbstractContainer.core"
                 },
                 {
                     "path": "../../src/container/",
-                    "name": "Container.js"
+                    "name": "Container.core"
                 },
                 {
                     "path": "../../src/container/",
-                    "name": "Viewport.js"
+                    "name": "Viewport.core"
                 },
                 {
                     "path": "../../src/panel/",
-                    "name": "Header.js"
+                    "name": "Header.core"
                 },
                 {
                     "path": "../../src/tab/",
-                    "name": "Tab.js"
+                    "name": "Tab.core"
                 },
                 {
                     "path": "../../src/tab/",
-                    "name": "Bar.js"
+                    "name": "Bar.core"
                 },
                 {
                     "path": "../../src/toolbar/",
-                    "name": "Separator.js"
+                    "name": "Separator.core"
                 },
                 {
                     "path": "../../src/layout/container/boxOverflow/",
-                    "name": "Menu.js"
+                    "name": "Menu.core"
                 },
                 {
                     "path": "../../src/layout/container/",
-                    "name": "Box.js"
+                    "name": "Box.core"
                 },
                 {
                     "path": "../../src/layout/container/",
-                    "name": "HBox.js"
+                    "name": "HBox.core"
                 },
                 {
                     "path": "../../src/layout/container/",
-                    "name": "VBox.js"
+                    "name": "VBox.core"
                 },
                 {
                     "path": "../../src/toolbar/",
-                    "name": "Toolbar.js"
+                    "name": "Toolbar.core"
                 },
                 {
                     "path": "../../src/layout/container/",
-                    "name": "Accordion.js"
+                    "name": "Accordion.core"
                 },
                 {
                     "path": "../../../platform/src/panel/",
-                    "name": "AbstractPanel.js"
+                    "name": "AbstractPanel.core"
                 },
                 {
                     "path": "../../src/grid/",
-                    "name": "ColumnLayout.js"
+                    "name": "ColumnLayout.core"
                 },
                 {
                     "path": "../../src/dd/",
-                    "name": "StatusProxy.js"
+                    "name": "StatusProxy.core"
                 },
                 {
                     "path": "../../src/",
-                    "name": "LoadMask.js"
+                    "name": "LoadMask.core"
                 },
                 {
                     "path": "../../../platform/src/selection/",
-                    "name": "DataViewModel.js"
+                    "name": "DataViewModel.core"
                 },
                 {
                     "path": "../../../platform/src/view/",
-                    "name": "AbstractView.js"
+                    "name": "AbstractView.core"
                 },
                 {
                     "path": "../../src/view/",
-                    "name": "View.js"
+                    "name": "View.core"
                 },
                 {
                     "path": "../../src/view/",
-                    "name": "Table.js"
+                    "name": "Table.core"
                 },
                 {
                     "path": "../../src/grid/",
-                    "name": "View.js"
+                    "name": "View.core"
                 },
                 {
                     "path": "../../src/tree/",
-                    "name": "View.js"
+                    "name": "View.core"
                 },
                 {
                     "path": "../../src/dd/",
-                    "name": "DragDrop.js"
+                    "name": "DragDrop.core"
                 },
                 {
                     "path": "../../src/dd/",
-                    "name": "DD.js"
+                    "name": "DD.core"
                 },
                 {
                     "path": "../../src/dd/",
-                    "name": "DDProxy.js"
+                    "name": "DDProxy.core"
                 },
                 {
                     "path": "../../src/dd/",
-                    "name": "DragSource.js"
+                    "name": "DragSource.core"
                 },
                 {
                     "path": "../../src/panel/",
-                    "name": "DD.js"
+                    "name": "DD.core"
                 },
                 {
                     "path": "../../src/panel/",
-                    "name": "Panel.js"
+                    "name": "Panel.core"
                 },
                 {
-                    "path": "js/",
-                    "name": "Desktop.js"
+                    "path": "core/",
+                    "name": "Desktop.core"
                 },
                 {
-                    "path": "js/",
-                    "name": "App.js"
-                },
-                {
-                    "path": "../../src/window/",
-                    "name": "Window.js"
+                    "path": "core/",
+                    "name": "App.core"
                 },
                 {
                     "path": "../../src/window/",
-                    "name": "MessageBox.js"
+                    "name": "Window.core"
+                },
+                {
+                    "path": "../../src/window/",
+                    "name": "MessageBox.core"
                 },
                 {
                     "path": "",
-                    "name": "Settings.js"
+                    "name": "Settings.core"
                 },
                 {
                     "path": "../../src/tab/",
-                    "name": "Panel.js"
+                    "name": "Panel.core"
                 },
                 {
                     "path": "",
-                    "name": "TabWindow.js"
+                    "name": "TabWindow.core"
                 },
                 {
                     "path": "../../src/panel/",
-                    "name": "Table.js"
+                    "name": "Table.core"
                 },
                 {
                     "path": "../../src/grid/",
-                    "name": "Panel.js"
+                    "name": "Panel.core"
                 },
                 {
                     "path": "../../src/tip/",
-                    "name": "Tip.js"
+                    "name": "Tip.core"
                 },
                 {
                     "path": "../../src/tip/",
-                    "name": "ToolTip.js"
+                    "name": "ToolTip.core"
                 },
                 {
                     "path": "../../../platform/src/chart/",
-                    "name": "Tip.js"
+                    "name": "Tip.core"
                 },
                 {
                     "path": "../../../platform/src/chart/series/",
-                    "name": "Series.js"
+                    "name": "Series.core"
                 },
                 {
                     "path": "../../../platform/src/chart/series/",
-                    "name": "Cartesian.js"
+                    "name": "Cartesian.core"
                 },
                 {
                     "path": "../../../platform/src/chart/series/",
-                    "name": "Area.js"
+                    "name": "Area.core"
                 },
                 {
                     "path": "../../../platform/src/chart/series/",
-                    "name": "Bar.js"
+                    "name": "Bar.core"
                 },
                 {
                     "path": "../../../platform/src/chart/series/",
-                    "name": "Column.js"
+                    "name": "Column.core"
                 },
                 {
                     "path": "../../../platform/src/chart/series/",
-                    "name": "Gauge.js"
+                    "name": "Gauge.core"
                 },
                 {
                     "path": "../../../platform/src/chart/series/",
-                    "name": "Line.js"
+                    "name": "Line.core"
                 },
                 {
                     "path": "../../../platform/src/chart/series/",
-                    "name": "Pie.js"
+                    "name": "Pie.core"
                 },
                 {
                     "path": "../../../platform/src/chart/series/",
-                    "name": "Radar.js"
+                    "name": "Radar.core"
                 },
                 {
                     "path": "../../../platform/src/chart/series/",
-                    "name": "Scatter.js"
+                    "name": "Scatter.core"
                 },
                 {
                     "path": "",
-                    "name": "SystemStatus.js"
+                    "name": "SystemStatus.core"
                 },
                 {
                     "path": "../../src/tip/",
-                    "name": "QuickTip.js"
+                    "name": "QuickTip.core"
                 },
                 {
                     "path": "../../src/tip/",
-                    "name": "QuickTipManager.js"
+                    "name": "QuickTipManager.core"
                 },
                 {
                     "path": "../../src/form/field/",
-                    "name": "HtmlEditor.js"
+                    "name": "HtmlEditor.core"
                 },
                 {
                     "path": "",
-                    "name": "Notepad.js"
+                    "name": "Notepad.core"
                 },
                 {
                     "path": "../../src/dd/",
-                    "name": "DragZone.js"
+                    "name": "DragZone.core"
                 },
                 {
                     "path": "../../src/grid/header/",
-                    "name": "DragZone.js"
+                    "name": "DragZone.core"
                 },
                 {
                     "path": "../../src/dd/",
-                    "name": "DDTarget.js"
+                    "name": "DDTarget.core"
                 },
                 {
                     "path": "../../src/dd/",
-                    "name": "ScrollManager.js"
+                    "name": "ScrollManager.core"
                 },
                 {
                     "path": "../../src/dd/",
-                    "name": "DropTarget.js"
+                    "name": "DropTarget.core"
                 },
                 {
                     "path": "../../src/dd/",
-                    "name": "DropZone.js"
+                    "name": "DropZone.core"
                 },
                 {
                     "path": "../../src/grid/header/",
-                    "name": "DropZone.js"
+                    "name": "DropZone.core"
                 },
                 {
                     "path": "../../src/grid/plugin/",
-                    "name": "HeaderReorderer.js"
+                    "name": "HeaderReorderer.core"
                 },
                 {
                     "path": "../../src/grid/header/",
-                    "name": "Container.js"
+                    "name": "Container.core"
                 },
                 {
                     "path": "../../src/grid/column/",
-                    "name": "Column.js"
+                    "name": "Column.core"
                 },
                 {
                     "path": "../../src/grid/",
-                    "name": "RowNumberer.js"
+                    "name": "RowNumberer.core"
                 },
                 {
                     "path": "",
-                    "name": "GridWindow.js"
+                    "name": "GridWindow.core"
                 },
                 {
                     "path": "../../src/tree/",
-                    "name": "Column.js"
+                    "name": "Column.core"
                 },
                 {
                     "path": "../../src/tree/",
-                    "name": "Panel.js"
+                    "name": "Panel.core"
                 },
                 {
                     "path": "",
-                    "name": "AccordionWindow.js"
+                    "name": "AccordionWindow.core"
                 },
                 {
-                    "path": "js/",
-                    "name": "ShortcutModel.js"
+                    "path": "core/",
+                    "name": "ShortcutModel.core"
                 },
                 {
                     "path": "",
-                    "name": "App.js"
+                    "name": "App.core"
                 },
                 {
                     "path": "../../../platform/src/util/",
-                    "name": "Point.js"
+                    "name": "Point.core"
                 },
                 {
                     "path": "../../src/",
-                    "name": "Layer.js"
+                    "name": "Layer.core"
                 },
                 {
                     "path": "../../../platform/src/data/",
-                    "name": "Batch.js"
+                    "name": "Batch.core"
                 },
                 {
                     "path": "../../../platform/src/data/",
-                    "name": "Request.js"
+                    "name": "Request.core"
                 },
                 {
-                    "path": "js/",
-                    "name": "Video.js"
-                },
-                {
-                    "path": "../../../platform/src/draw/engine/",
-                    "name": "SvgExporter.js"
+                    "path": "core/",
+                    "name": "Video.core"
                 },
                 {
                     "path": "../../../platform/src/draw/engine/",
-                    "name": "ImageExporter.js"
+                    "name": "SvgExporter.core"
+                },
+                {
+                    "path": "../../../platform/src/draw/engine/",
+                    "name": "ImageExporter.core"
                 },
                 {
                     "path": "../../src/util/",
-                    "name": "CSS.js"
+                    "name": "CSS.core"
                 },
                 {
                     "path": "../../../platform/src/util/",
-                    "name": "Grouper.js"
+                    "name": "Grouper.core"
                 },
                 {
                     "path": "../../../platform/src/",
-                    "name": "PluginManager.js"
+                    "name": "PluginManager.core"
                 },
                 {
                     "path": "../../src/resizer/",
-                    "name": "Resizer.js"
+                    "name": "Resizer.core"
                 },
                 {
                     "path": "../../src/panel/",
-                    "name": "Tool.js"
+                    "name": "Tool.core"
                 },
                 {
                     "path": "../../src/layout/component/",
-                    "name": "Body.js"
+                    "name": "Body.core"
                 },
                 {
                     "path": "../../src/",
-                    "name": "Img.js"
+                    "name": "Img.core"
                 },
                 {
                     "path": "../../src/view/",
-                    "name": "TableChunker.js"
+                    "name": "TableChunker.core"
                 },
                 {
-                    "path": "js/",
-                    "name": "Wallpaper.js"
+                    "path": "core/",
+                    "name": "Wallpaper.core"
                 },
                 {
                     "path": "",
-                    "name": "WallpaperModel.js"
+                    "name": "WallpaperModel.core"
                 },
                 {
                     "path": "../../src/grid/",
-                    "name": "PagingScroller.js"
+                    "name": "PagingScroller.core"
                 },
                 {
                     "path": "../../../platform/src/util/",
-                    "name": "Queue.js"
+                    "name": "Queue.core"
                 },
                 {
                     "path": "../../src/menu/",
-                    "name": "Item.js"
+                    "name": "Item.core"
                 },
                 {
                     "path": "../../../platform/src/draw/",
-                    "name": "Matrix.js"
+                    "name": "Matrix.core"
                 },
                 {
                     "path": "../../../platform/src/",
-                    "name": "ElementLoader.js"
+                    "name": "ElementLoader.core"
                 },
                 {
                     "path": "../../src/resizer/",
-                    "name": "Splitter.js"
+                    "name": "Splitter.core"
                 },
                 {
                     "path": "../../src/toolbar/",
-                    "name": "TextItem.js"
+                    "name": "TextItem.core"
                 },
                 {
                     "path": "../../src/form/",
-                    "name": "CheckboxManager.js"
+                    "name": "CheckboxManager.core"
                 },
                 {
                     "path": "../../src/resizer/",
-                    "name": "BorderSplitter.js"
+                    "name": "BorderSplitter.core"
                 },
                 {
                     "path": "../../src/grid/",
-                    "name": "LockingView.js"
+                    "name": "LockingView.core"
                 },
                 {
                     "path": "../../../platform/src/layout/",
-                    "name": "ClassList.js"
+                    "name": "ClassList.core"
                 },
                 {
                     "path": "../../src/",
-                    "name": "FocusManager.js"
+                    "name": "FocusManager.core"
                 },
                 {
                     "path": "../../../platform/src/draw/",
-                    "name": "SpriteDD.js"
+                    "name": "SpriteDD.core"
                 },
                 {
                     "path": "../../../platform/src/",
-                    "name": "ComponentLoader.js"
+                    "name": "ComponentLoader.core"
                 },
                 {
                     "path": "../../src/form/field/",
-                    "name": "Checkbox.js"
+                    "name": "Checkbox.core"
                 },
                 {
                     "path": "../../src/layout/container/",
-                    "name": "Border.js"
+                    "name": "Border.core"
                 },
                 {
                     "path": "../../src/grid/",
-                    "name": "Lockable.js"
+                    "name": "Lockable.core"
                 },
                 {
                     "path": "../../src/menu/",
-                    "name": "CheckItem.js"
+                    "name": "CheckItem.core"
                 },
                 {
                     "path": "../../src/menu/",
-                    "name": "Separator.js"
+                    "name": "Separator.core"
                 },
                 {
                     "path": "../../../platform/src/layout/",
-                    "name": "ContextItem.js"
+                    "name": "ContextItem.core"
                 },
                 {
                     "path": "../../../platform/src/layout/",
-                    "name": "Context.js"
+                    "name": "Context.core"
                 },
                 {
                     "path": "../../src/menu/",
-                    "name": "KeyNav.js"
+                    "name": "KeyNav.core"
                 },
                 {
                     "path": "../../src/menu/",
-                    "name": "Menu.js"
+                    "name": "Menu.core"
                 },
                 {
                     "path": "../../../platform/src/draw/",
-                    "name": "Sprite.js"
+                    "name": "Sprite.core"
                 },
                 {
                     "path": "../../../platform/src/draw/engine/",
-                    "name": "Svg.js"
+                    "name": "Svg.core"
                 },
                 {
                     "path": "../../../platform/src/draw/engine/",
-                    "name": "Vml.js"
+                    "name": "Vml.core"
                 },
                 {
-                    "path": "js/",
-                    "name": "StartMenu.js"
+                    "path": "core/",
+                    "name": "StartMenu.core"
                 },
                 {
-                    "path": "js/",
-                    "name": "TaskBar.js"
-                },
-                {
-                    "path": "../../src/resizer/",
-                    "name": "ResizeTracker.js"
+                    "path": "core/",
+                    "name": "TaskBar.core"
                 },
                 {
                     "path": "../../src/resizer/",
-                    "name": "SplitterTracker.js"
+                    "name": "ResizeTracker.core"
                 },
                 {
                     "path": "../../src/resizer/",
-                    "name": "BorderSplitterTracker.js"
+                    "name": "SplitterTracker.core"
+                },
+                {
+                    "path": "../../src/resizer/",
+                    "name": "BorderSplitterTracker.core"
                 },
                 {
                     "path": "../../src/",
-                    "name": "ShadowPool.js"
+                    "name": "ShadowPool.core"
                 },
                 {
                     "path": "../../src/",
-                    "name": "Shadow.js"
+                    "name": "Shadow.core"
                 }
             ]
         }

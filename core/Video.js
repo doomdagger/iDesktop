@@ -5,7 +5,7 @@
 * http://www.sencha.com/license
 */
 
-// From code originally written by David Davis (http://www.sencha.com/blog/html5-video-canvas-and-ext-js/)
+// From code originally written by David Davis (http://www.sencha.com/blog/html5-video-canvas-and-ext-core/)
 
 /* -NOTICE-
  * For HTML5 video to work, your server must

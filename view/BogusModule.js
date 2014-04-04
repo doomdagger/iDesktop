@@ -7,7 +7,7 @@
 
 var windowIndex = 0;
 
-Ext.define('MyDesktop.BogusModule', {
+Ext.define('MyDesktop.view.BogusModule', {
     extend: 'Ext.ux.desktop.Module',
 
     init : function(){
