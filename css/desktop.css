@@ -161,30 +161,70 @@ div.ux-taskbar div.x-toolbar {
     background-repeat: repeat;
 }
 
+
 .ux-desktop-shortcut {
+    color: #FFFFFF;
+    float: left;
     cursor: pointer;
     text-align: center;
     padding: 8px;
     margin: 8px;
-    width: 64px;
+    width: 88px;
+}
+
+.ux-desktop-shortcut:hover {
+    background: url("../images/appbutton_mouseover_bg3.png?t=20111011001") no-repeat scroll 1px 0 rgba(0, 0, 0, 0);
 }
 
 .ux-desktop-shortcut-icon {
     width: 48px;
     height: 48px;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0 auto;
     background-color: transparent;
+    background-position: center center;
     background-repeat: no-repeat;
 }
 
-.ux-desktop-shortcut-text {
-    font: normal 10px tahoma,arial,verdana,sans-serif;
-    text-decoration: none;
-    padding-top: 5px;
-    color: white;
+.appButton_appName {
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 20px;
+    margin: 8px 0 0;
+    overflow: hidden;
+    text-align: center;
 }
 
-.x-view-over .ux-desktop-shortcut-text {
-    text-decoration: underline;
+
+.appButton_appName_inner {
+    background: url("../images/portal_all_png.png?t=20111011016") no-repeat scroll -80px -560px rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 20px;
+    line-height: 18px;
+    margin: 0;
+    max-width: 78px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    text-indent: 10px;
+    vertical-align: middle;
+    width: auto;
+}
+
+.appButton_appName_inner_right {
+    background: url("../images/portal_all_png.png?t=20111011016") no-repeat scroll -166px -560px rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    width: 10px;
+}
+
+
+.x-view-over .appButton_appName {
+
 }
 
 

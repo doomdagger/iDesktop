@@ -80,7 +80,7 @@ Ext.define('MyDesktop.App', {
                 ]
             }),
 
-            wallpaper: 'wallpapers/london.jpg',
+            wallpaper: 'wallpapers/green_land.jpg',
             wallpaperStretch: true
         });
     },

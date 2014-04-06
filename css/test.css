@@ -1,0 +1,85 @@
+#topBar, #leftBar, #rightBar {
+    z-index: 10;
+}
+
+#leftBar {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+}
+
+.dock_container {
+    height: 576px;
+    left: 0;
+    margin: -290px 0 0;
+    position: absolute;
+    top: 50%;
+    width: 73px;
+}
+
+.dock_pos_left .dock_middle {
+    background: url("../images/dock_l.png?t=20111011001") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.dock_middle {
+    height: 566px;
+    padding-top: 10px;
+}
+
+.dock_container .appButton {
+    height: 58px;
+    margin: 2px 3px 2px 4px;
+    padding: 0;
+    width: 58px;
+}
+
+.appButton {
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline;
+    float: left;
+    font-size: 12px;
+    height: 88px;
+    position: relative;
+    width: 88px;
+}
+
+.appButton:hover {
+    background: url("../images/appbutton_mouseover_bg3.png?t=20111011001") no-repeat scroll 1px 0 rgba(0, 0, 0, 0);
+}
+
+
+.appMarket {
+    float: left;
+}
+
+.dock_container .appButton_appIcon, .aMg_dock_container .appButton_appIcon {
+    margin: 5px auto 0;
+}
+
+.appButton_appIcon {
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 48px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 48px;
+}
+
+.appButton_appIconImg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+fieldset, img {
+    border: 0 none;
+}
+

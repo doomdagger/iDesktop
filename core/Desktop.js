@@ -65,7 +65,11 @@ Ext.define('Ext.ux.desktop.Desktop', {
                 '<div class="ux-desktop-shortcut-icon {iconCls}">',
                     '<img src="',Ext.BLANK_IMAGE_URL,'" title="{name}">',
                 '</div>',
-                '<span class="ux-desktop-shortcut-text">{name}</span>',
+                '<div class="appButton_appName">',
+                    '<div class="appButton_appName_inner">{name}</div>',
+                    '<div class="appButton_appName_inner_right"></div>',
+                '</div>',
+                //'<span class="ux-desktop-shortcut-text">{name}</span>',
             '</div>',
         '</tpl>',
         '<div class="x-clear"></div>'
@@ -139,8 +143,8 @@ Ext.define('Ext.ux.desktop.Desktop', {
     },
 
     initShortcut : function() {
-        var btnHeight = 80;
-        var btnWidth = 80;
+        var btnHeight = 88;
+        var btnWidth = 88;
         var btnPadding = 6;
         var col = null;
         var row = null;
