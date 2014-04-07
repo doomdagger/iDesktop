@@ -50,15 +50,33 @@ Ext.define('Ext.ux.desktop.App', {
 
         desktopCfg = me.getDesktopConfig();
         me.desktop = new Ext.ux.desktop.Desktop(desktopCfg);
+
+        //try add left bar, leave the left bar static temporary
+        me.leftbar = new Ext.dom.Layer(me.getLeftbarConfig(),Ext.get('leftbar'));
+
         me.viewport = new Ext.container.Viewport({
             layout: 'fit',
-            items: [ me.desktop ]
+            items: [ me.desktop,me.leftbar ]
         });
 
         Ext.EventManager.on(window, 'beforeunload', me.onUnload, me);
 
         me.isReady = true;
         me.fireEvent('ready', me);
+    },
+
+    /**
+     * config left bar
+     * @returns {{app: Ext.ux.desktop.App, hideMode: string}}
+     */
+    getLeftbarConfig: function () {
+        var me = this, cfg = {
+            app: me,
+            hideMode: 'offsets'
+        };
+
+        Ext.apply(cfg, me.leftbarConfig);
+        return cfg;
     },
 
     /**

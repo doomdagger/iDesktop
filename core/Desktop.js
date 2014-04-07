@@ -22,8 +22,7 @@ Ext.define('Ext.ux.desktop.Desktop', {
         'Ext.window.Window',
 
         'Ext.ux.desktop.TaskBar',
-        'Ext.ux.desktop.Wallpaper',
-        'Ext.ux.desktop.LeftBar'
+        'Ext.ux.desktop.Wallpaper'
     ],
 
     activeWindowCls: 'ux-desktop-active-win',
@@ -82,11 +81,6 @@ Ext.define('Ext.ux.desktop.Desktop', {
      */
     taskbarConfig: null,
 
-    /**
-     * @cfg {Object} leftbarConfig
-     * The config object for the LeftBar.
-     */
-    leftbarConfig: null,
 
     windowMenu: null,
 
@@ -104,8 +98,6 @@ Ext.define('Ext.ux.desktop.Desktop', {
 
         //added shortcut context menu
         me.shortcutContextMenu = new Ext.menu.Menu(me.createWindowMenu());
-        //added left bar, use layer, to magnify the custom configuration for left bar
-        me.leftbar = new Ext.dom.Layer();
 
         me.items = [
             { xtype: 'wallpaper', id: me.id+'_wallpaper' },
@@ -116,7 +108,11 @@ Ext.define('Ext.ux.desktop.Desktop', {
 
         me.shortcutsView = me.items.getAt(1);
         me.shortcutsView.on('itemclick', me.onShortcutItemClick, me);
-        
+        //context menu
+        me.shortcutsView.on('itemcontextmenu', function(){
+            alert("should invoke context menu here");
+        }, me);
+
         var wallpaper = me.wallpaper;
         me.wallpaper = me.items.getAt(0);
         if (wallpaper) {
@@ -151,11 +147,11 @@ Ext.define('Ext.ux.desktop.Desktop', {
             listeners:{
             	resize:function(){
             		me.initShortcut();
-            	},
+            	}/*,
                 itemcontextmenu:function(view, record, item, index, event, eOpts){
                     //do not want to have the desktop context menu here
 
-                }
+                }*/
             }
 
         };
@@ -164,7 +160,11 @@ Ext.define('Ext.ux.desktop.Desktop', {
     initShortcut : function() {
         var btnHeight = 88;
         var btnWidth = 88;
-        var btnPadding = 6;
+
+        var btnMarginLeft = 88;
+        var btnMarginTop = 10
+
+        var btnPadding = 15;
         var col = null;
         var row = null;
         var bottom = null;
@@ -173,11 +173,11 @@ Ext.define('Ext.ux.desktop.Desktop', {
         function initColRow() {
             col = {
                index : 1,
-               x : btnPadding
+               x : btnPadding + btnMarginLeft
             };
             row = {
                index : 1,
-               y : btnPadding + 10
+               y : btnPadding + btnMarginTop
             };
         }
         this.setXY = function(item) {

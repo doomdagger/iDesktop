@@ -8,12 +8,13 @@
     position: absolute;
     top: 0;
     width: 0;
+    z-index: 10;
 }
 
 .dock_container {
     height: 576px;
     left: 0;
-    margin: -290px 0 0;
+    margin: -320px 0 0;
     position: absolute;
     top: 50%;
     width: 73px;
@@ -26,6 +27,8 @@
 .dock_middle {
     height: 566px;
     padding-top: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .dock_container .appButton {
@@ -47,13 +50,9 @@
 }
 
 .appButton:hover {
-    background: url("../images/appbutton_mouseover_bg3.png?t=20111011001") no-repeat scroll 1px 0 rgba(0, 0, 0, 0);
+    background: url("../images/appbutton_mouseover_bg4.png?t=20111011001") no-repeat scroll center center rgba(0, 0, 0, 0);
 }
 
-
-.appMarket {
-    float: left;
-}
 
 .dock_container .appButton_appIcon, .aMg_dock_container .appButton_appIcon {
     margin: 5px auto 0;
@@ -79,7 +78,229 @@
     width: 100%;
 }
 
-fieldset, img {
+
+
+/*----------------------------------------------------
+    quick view!
+*/
+
+.quick_view_container {
+    position: absolute;
+    width: 335px;
+}
+
+.quick_view_container .perfect_nine_top {
+    font-size: 0;
+}
+
+.quick_view_container .perfect_nine_t_m {
+    background: url("../images/quick_view.png") repeat scroll center top rgba(0, 0, 0, 0);
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.quick_view_container .perfect_nine_t_l {
+    background: url("../images/quick_view.png") repeat scroll left top rgba(0, 0, 0, 0);
+    float: left;
+}
+
+.quick_view_container .perfect_nine_t_l, .quick_view_container .perfect_nine_t_r {
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.quick_view_container .perfect_nine_t_r {
+    background: url("../images/quick_view.png") repeat scroll right top rgba(0, 0, 0, 0);
+    float: right;
+}
+
+.quick_view_container .perfect_nine_middle {
+    overflow: hidden;
+}
+
+.quick_view_container .perfect_nine_m_l {
+    background: none repeat scroll 0 center rgba(0, 0, 0, 0);
+    float: left;
+    position: relative;
+}
+
+.quick_view_container .perfect_nine_m_l_t {
+    background: url("../images/quick_view.png") repeat scroll left -35px rgba(0, 0, 0, 0);
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.quick_view_container .perfect_nine_m_l_m {
+    background: url("../images/quick_view.png") repeat scroll 0 -14px rgba(0, 0, 0, 0);
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.quick_view_container .perfect_nine_m_l_b {
+    background: url("../images/quick_view.png") repeat scroll left -35px rgba(0, 0, 0, 0);
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    width: 100%;
+}
+.quick_view_container .perfect_nine_m_r {
+    background: none repeat scroll 0 center rgba(0, 0, 0, 0);
+    float: right;
+    position: relative;
+}
+
+.quick_view_container .perfect_nine_m_r_t {
+    background: url("../images/quick_view.png") repeat scroll right -35px rgba(0, 0, 0, 0);
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.quick_view_container .perfect_nine_m_r_m {
+    background: url("../images/quick_view.png") repeat scroll right -14px rgba(0, 0, 0, 0);
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.quick_view_container .perfect_nine_m_r_b {
+    background: url("../images/quick_view.png") repeat scroll right -35px rgba(0, 0, 0, 0);
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.quick_view_container .perfect_nine_context {
+    background: url("../images/quick_view.png") repeat scroll center -35px rgba(0, 0, 0, 0);
     border: 0 none;
+}
+
+.quick_view_container_control {
+    overflow: hidden;
+}
+
+.quick_view_container_open {
+    background: url("../images/open.png") no-repeat scroll -80px 0 rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: right;
+    height: 22px;
+    padding: 2px 0 0 25px;
+    position: relative;
+    width: 40px;
+}
+
+:link, *:visited {
+    text-decoration: none;
+}
+
+
+/*
+   real container started
+*/
+.quick_view_container_list {
+    margin-top: 2px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.quick_view_container_list_in {
+    color: #FFFFFF;
+    overflow-y: hidden;
+    text-align: center;
+    width: 100%;
+}
+
+.scrollBar {
+    background: url("../images/scrollbar_bgy.png") repeat-y scroll center center rgba(0, 0, 0, 0);
+    border-radius: 6px;
+    display: none;
+    height: 20px;
+    position: absolute;
+    right: 7px;
+    top: 0;
+    width: 7px;
+    z-index: 10;
+}
+
+.scrollBar_bgc {
+    background: url("../images/scrollbar_bg.png") repeat-y scroll center center rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    height: 100%;
+    position: absolute;
+    right: 8px;
+    top: 0;
+    width: 5px;
+}
+
+.quick_view_container_list_in .appButton_appIcon, .explorer_container .appButton_appIcon {
+    height: 32px;
+    margin: 5px auto 1px;
+    width: 32px;
+}
+
+.quick_view_container_list_in .appButton, .explorer_container .appButton {
+    height: 60px;
+    margin: 5px 8px;
+    width: 60px;
+}
+
+.appButton_appName {
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 20px;
+    margin: 8px 0 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.quick_view_container_list_in .appButton_appName, .explorer_container .appButton_appName {
+    margin: 0;
+    padding: 0 5px;
+}
+
+.appButton_appName_inner {
+    margin: auto;
+    overflow: hidden;
+    width: 50px;
+    word-break: break-all;
+}
+
+.quick_view_container .perfect_nine_b_m {
+
+}
+
+.quick_view_container .perfect_nine_b_m_m {
+    background: url("../images/quick_view.png") repeat scroll center bottom rgba(0, 0, 0, 0);
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.quick_view_container .perfect_nine_b_l {
+    background: url("../images/quick_view.png") repeat scroll left bottom rgba(0, 0, 0, 0);
+    float: left;
+}
+
+.quick_view_container .perfect_nine_b_l, .quick_view_container .perfect_nine_b_r {
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.quick_view_container .perfect_nine_b_r {
+    background: url("../images/quick_view.png") repeat scroll right bottom rgba(0, 0, 0, 0);
+    float: right;
 }
 

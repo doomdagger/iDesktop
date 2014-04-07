@@ -36,7 +36,7 @@ Ext.define('MyDesktop.App', {
         setTimeout(function(){
         	//console.log(new Date());
         	myDesktopApp.desktop.initShortcut();
-        },250);
+        },100);
     },
 
     getModules : function(){
