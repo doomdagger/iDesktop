@@ -22,7 +22,8 @@ Ext.define('Ext.ux.desktop.Desktop', {
         'Ext.window.Window',
 
         'Ext.ux.desktop.TaskBar',
-        'Ext.ux.desktop.Wallpaper'
+        'Ext.ux.desktop.Wallpaper',
+        'Ext.ux.desktop.LeftBar'
     ],
 
     activeWindowCls: 'ux-desktop-active-win',
@@ -81,6 +82,12 @@ Ext.define('Ext.ux.desktop.Desktop', {
      */
     taskbarConfig: null,
 
+    /**
+     * @cfg {Object} leftbarConfig
+     * The config object for the LeftBar.
+     */
+    leftbarConfig: null,
+
     windowMenu: null,
 
     initComponent: function () {
@@ -95,10 +102,16 @@ Ext.define('Ext.ux.desktop.Desktop', {
 
         me.contextMenu = new Ext.menu.Menu(me.createDesktopMenu());
 
+        //added shortcut context menu
+        me.shortcutContextMenu = new Ext.menu.Menu(me.createWindowMenu());
+        //added left bar, use layer, to magnify the custom configuration for left bar
+        me.leftbar = new Ext.dom.Layer();
+
         me.items = [
             { xtype: 'wallpaper', id: me.id+'_wallpaper' },
             me.createDataView()
         ];
+
         me.callParent();
 
         me.shortcutsView = me.items.getAt(1);
@@ -110,6 +123,8 @@ Ext.define('Ext.ux.desktop.Desktop', {
             me.setWallpaper(wallpaper, me.wallpaperStretch);
         }
     },
+
+    dockedItems: [],
 
     afterRender: function () {
         var me = this;
@@ -136,7 +151,11 @@ Ext.define('Ext.ux.desktop.Desktop', {
             listeners:{
             	resize:function(){
             		me.initShortcut();
-            	}
+            	},
+                itemcontextmenu:function(view, record, item, index, event, eOpts){
+                    //do not want to have the desktop context menu here
+
+                }
             }
 
         };

@@ -125,7 +125,7 @@ Ext.define('MyDesktop.App', {
             trayItems: [
                 { name: '表格窗口', iconCls: 'icon-grid' },
                 { name: '表格窗口', iconCls: 'accordion' },
-                { xtype: 'trayclock', flex: 1 },
+                { xtype: 'trayclock', flex: 1 }
             ]
         });
     },
