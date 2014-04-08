@@ -12,8 +12,8 @@ Ext.define('Ext.ux.desktop.App', {
 
     requires: [
         'Ext.container.Viewport',
-
-        'Ext.ux.desktop.Desktop'
+        'Ext.ux.desktop.Desktop',
+        'Ext.ux.desktop.LeftBar'
     ],
 
     isReady: false,
@@ -52,11 +52,11 @@ Ext.define('Ext.ux.desktop.App', {
         me.desktop = new Ext.ux.desktop.Desktop(desktopCfg);
 
         //try add left bar, leave the left bar static temporary
-        me.leftbar = new Ext.dom.Layer(me.getLeftbarConfig(),Ext.get('leftbar'));
+        me.leftbar = new Ext.ux.desktop.LeftBar(me.getLeftbarConfig());
 
         me.viewport = new Ext.container.Viewport({
             layout: 'fit',
-            items: [ me.desktop,me.leftbar ]
+            items: [ me.desktop ]
         });
 
         Ext.EventManager.on(window, 'beforeunload', me.onUnload, me);
@@ -72,7 +72,17 @@ Ext.define('Ext.ux.desktop.App', {
     getLeftbarConfig: function () {
         var me = this, cfg = {
             app: me,
-            hideMode: 'offsets'
+            shortcuts: [
+                { name: '表格窗口', iconCls: 'grid-shortcut', module: 'grid-win' },
+                { name: '联系人', iconCls: 'accordion-shortcut', module: 'acc-win' },
+                { name: '笔记本', iconCls: 'notepad-shortcut', module: 'notepad' },
+                { name: '笔记本1', iconCls: 'notepad-shortcut', module: 'notepad' },
+                { name: '笔记本2', iconCls: 'notepad-shortcut', module: 'notepad' },
+                { name: '笔记本3', iconCls: 'notepad-shortcut', module: 'notepad' },
+                { name: '笔记本4', iconCls: 'notepad-shortcut', module: 'notepad' },
+                { name: '系统状态', iconCls: 'cpu-shortcut', module: 'systemstatus'},
+                { name: '系统管理', iconCls: 'grid-shortcut', module: 'sys-setting'}
+            ]
         };
 
         Ext.apply(cfg, me.leftbarConfig);

@@ -3,49 +3,59 @@
  */
 
 Ext.define("Ext.ux.desktop.LeftBar", {
-    extend: 'Ext.dom.Layer',
+
+    requires:[
+        'Ext.XTemplate'
+    ],
 
     app: null,
 
+    /**
+     * array, follow the field pattern of shortcut model
+     */
     shortcuts: null,
 
     shortcutTpl: [
-        '<div class="appButton" title="{name}" style="display: block;">',
-            '<div style="" class="appButton_appIcon {iconCls}">',
-                '<img src="',Ext.BLANK_IMAGE_URL,'" title="{name}">',
+        '<tpl for=".">',
+            '<div class="appButton" title="{name}" style="display: block;">',
+                '<div style="" class="appButton_appIcon">',
+                    '<img alt="{name}" src="http://0.web.qstatic.com/webqqpic/style/images/diskexplorer.png?20111011001" class="appButton_appIconImg">',
+                '</div>',
             '</div>',
-        '</div>'
+        '</tpl>'
     ],
 
     createDataView: function(){
         var me = this;
 
         var startDom = [
-            '<div id="leftBar" style="width: 73px; height: 100%;">',
-                '<div id="dockContainer" class="dock_container dock_pos_left" style="z-index: 10;">',
-                    '<div class="dock_middle">'
+            '<div id="dockContainer" class="dock_container dock_pos_left" style="z-index: 10;">',
+                '<div class="dock_middle">'
         ];
         var endDom = [
-                    '</div>',
                 '</div>',
             '</div>'
         ];
 
-        var ret = '';
-
         //compose tpl
-        Ext.each(me.shortcuts, function(shortcut, index){
-
-        });
+        var bodyTpl = Ext.create('Ext.XTemplate',me.shortcutTpl);
+        return startDom.join('')+bodyTpl.apply(me.shortcuts)+endDom.join('');
     },
 
-    constructor: function(config, existingEl){
+    view: null,
+
+    constructor: function(config){
         var me = this;
         config = config || {};
-        if(config.app) me.app = config.app;
-        if(config.shortcuts) me.shortcuts = config.shortcuts;
 
-        me.callParent(config,me.createDataView());
+        if(config.shortcuts) me.shortcuts = config.shortcuts;
+        if(config.app) me.app = config.app;
+
+        me.view = new Ext.dom.Layer({
+            dh:  {tag: 'div', id:'leftbar', style: 'width: 73px; height: 100%;', cls:'x-layer-toolbar'}
+        });
+
+        me.view.createChild(me.createDataView());
     }
 
 });
