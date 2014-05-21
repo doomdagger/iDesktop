@@ -5,4 +5,4 @@ iDesktop
 
 ## What does it look like
 
-![1](http://nexus.candylee.cn/cdn/get/git-cache/doomdagger/iDesktop/1.png)
+![1](http://nexus.candylee.cn/cdn/get/git-cache/doomdagger/iDesktop/1.jpg)
