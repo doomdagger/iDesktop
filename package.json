@@ -1,0 +1,72 @@
+{
+    "name": "iDesktop",
+    "version": "1.0.0",
+    "description": "Web desktop app based on ext js 5.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index",
+        "test": "",
+        "install": ""
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://git.candylee.cn/doomdagger/idesktop.git"
+    },
+    "keywords": [
+        "desktop"
+    ],
+    "engines": {
+        "node": ">= 0.10.x"
+    },
+    "author": [{
+        "name": "Li He",
+        "email": "jet.in.brain@gmail.com"
+    }],
+    "license": "ISC",
+    "dependencies": {
+        "express": "~4.2.0",
+        "body-parser": "~1.3.1",
+        "compression": "~1.0.7",
+        "morgan": "~1.1.0",
+        "method-override": "~2.0.2",
+        "express-session": "~1.3.1",
+        "connect-slashes": "^1.2.0",
+        "connect-redis": "~2.0.0",
+        "errorhandler": "~1.0.2",
+        "cookie-parser": "~1.1.0",
+        "serve-favicon": "~2.0.1",
+        "colors": "~0.6.2",
+        "when": "~3.2.3",
+        "lodash": "~2.4.1",
+        "semver": "2.2.1",
+        "redis": "~0.10.3"
+    },
+    "devDependencies": {
+        "blanket": "~1.1.5",
+        "bower": "~1.2.8",
+        "grunt": "~0.4.1",
+        "grunt-cli": "~0.1.13",
+        "grunt-contrib-clean": "~0.5.0",
+        "grunt-contrib-compress": "~0.5.2",
+        "grunt-contrib-concat": "~0.3.0",
+        "grunt-contrib-copy": "~0.4.1",
+        "grunt-contrib-jshint": "~0.8.0",
+        "grunt-contrib-uglify": "~0.2.5",
+        "grunt-contrib-watch": "~0.5.3",
+        "grunt-express-server": "~0.4.11",
+        "grunt-docker": "~0.0.8",
+        "grunt-mocha-cli": "~1.4.0",
+        "grunt-shell": "~0.6.1",
+        "grunt-update-submodules": "~0.4.0",
+        "matchdep": "~0.3.0",
+        "mocha": "~1.19.0",
+        "nock": "0.27.2",
+        "rewire": "~2.0.0",
+        "request": "~2.29.0",
+        "require-dir": "~0.1.0",
+        "mkdirp": "0.3.0",
+        "should": "~3.3.1",
+        "sinon": "~1.7.3",
+        "supertest": "~0.8.2"
+    }
+}
