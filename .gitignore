@@ -1,6 +1,6 @@
 # sencha meta #
-ext/
-build/
+client/ext/
+client/build/
 
 # node modules #
 node_modules/

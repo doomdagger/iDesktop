@@ -3,6 +3,7 @@ var express     = require('express'),
     cookieParser = require('cookie-parser'),
     compress    = require('compression'),
     errorhandler = require('errorhandler'),
+    logger      = require('morgan'),
     methodOverride = require('method-override'),
     session     = require('express-session'),
     redis       = require('redis'),
@@ -107,13 +108,15 @@ function iDesktopStartMessages() {
     // (X-Forwarded-Proto header will be checked, if present)
     expressServer.enable('trust proxy');
 
+    expressServer.use(logger('dev'));
+
     expressServer.use(errorhandler());
 
     // Favicon
-    expressServer.use("/", favicon(__dirname + '/favicon.ico'));
+    expressServer.use("/", favicon(__dirname + '/client/resources/images/favicon.ico'));
 
     // Static assets
-    expressServer.use('/', express['static'](__dirname, {maxAge: ONE_YEAR_MS}));
+    expressServer.use('/', express['static'](__dirname + '/client', {maxAge: ONE_YEAR_MS}));
 
     // Add in all trailing slashes, add this middleware after the static middleware
     expressServer.use(slashes(true, {headers: {'Cache-Control': 'public, max-age=' + ONE_YEAR_S}}));
@@ -140,9 +143,6 @@ function iDesktopStartMessages() {
         cookie: cookie
     }));
 
-    expressServer.get('/index', function(req, res) {
-        res.send('hello');
-    });
 
     httpServer = expressServer.listen(
         port,

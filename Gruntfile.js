@@ -169,8 +169,8 @@ configureGrunt = function (grunt) {
         // ### grunt-shell
         // Command line tools where it's easier to run a command directly than configure a grunt plugin
         shell: {
-            prepare_touch: {
-                command: "git clone http://git.candylee.cn/doomdagger/touch.git ./core/client/touch",
+            prepare_ext: {
+                command: "git clone http://git.candylee.cn/doomdagger/ext.git ./ext",
                 options: {
                     stdout: true
                 }
@@ -252,10 +252,6 @@ configureGrunt = function (grunt) {
                     src: ['**'],
                     dest: '<%= paths.releaseBuild %>/core/client/',
                     expand: true
-                }, {
-                    expand: true,
-                    src: buildGlob,
-                    dest: '<%= paths.releaseBuild %>/'
                 }]
             }
         },
