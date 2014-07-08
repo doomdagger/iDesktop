@@ -51,10 +51,11 @@ is loaded.
 This folder contains the styling for the application's views. See iDesktop/sass/Readme.md
 for details.
 
-## How to start
+
+
+# For Developers
+
+### How to Start
 
 * `grunt init` -- download ext5 framework
-
-## For Developer
-
 * use `grunt dev` while you develop iDesktop
