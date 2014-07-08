@@ -7,3 +7,7 @@ node_modules/
 
 # idea meta #
 .idea/
+
+# scripts #
+client/vendor/
+bower_components/

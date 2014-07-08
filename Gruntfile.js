@@ -1,13 +1,9 @@
 var path           = require('path'),
     colors         = require('colors'),
 
-    fs             = require('fs'),
-    _              = require('lodash');
 
-
-// ## Grunt configuration
-
-configureGrunt = function (grunt) {
+    // ## Grunt configuration
+    configureGrunt = function (grunt) {
 
     // *This is not useful but required for jshint*
     colors.setTheme({silly: 'rainbow'});
@@ -30,15 +26,15 @@ configureGrunt = function (grunt) {
         watch: {
             livereload: {
                 files: [
-                    'app.js',
-                    'app/**/*.js'
+                    'client/app.js',
+                    'client/app/**/*.js'
                 ],
                 options: {
                     livereload: true
                 }
             },
             express: {
-                files:  ['index.js'],
+                files:  ['index.js', 'server/**/*.js'],
                 tasks:  ['express:dev'],
                 options: {
                     // **Note:** Without this option specified express won't be reloaded
@@ -79,27 +75,19 @@ configureGrunt = function (grunt) {
                 files: {
                     src: [
                         '*.js',
-                        'core/*.js',
-                        'core/server/**/*.js',
-                        'core/shared/**/*.js',
-                        '!core/shared/vendor/**/*.js',
-                        '!core/shared/lib/**/*.js'
+                        'server/**/*.js'
                     ]
                 }
             },
             // Linting rules for client side javascript code
             client: {
                 options: {
-                    jshintrc: 'core/client/.jshintrc'
+                    jshintrc: 'client/.jshintrc'
                 },
                 files: {
                     src: [
-                        'core/client/*.js',
-                        'core/client/**/*.js',
-                        '!core/client/.sencha/**/*.js',
-                        '!core/client/build/**/*.js',
-                        '!core/client/touch/*.js',
-                        '!core/client/touch/**/*.js'
+                        'client/app.js',
+                        'client/app/**/*.js'
                     ]
                 }
             }
@@ -117,51 +105,36 @@ configureGrunt = function (grunt) {
 
             // #### All Unit tests
             unit: {
-                src: ['core/test/unit/**/*_spec.js']
+                src: ['test/unit/**/*_spec.js']
             },
 
             // ##### Groups of unit tests
             server: {
-                src: ['core/test/unit/**/server*_spec.js']
-            },
-
-            perm: {
-                src: ['core/test/unit/**/permissions_spec.js']
-            },
-
-            migrate: {
-                src: [
-                    'core/test/unit/**/export_spec.js',
-                    'core/test/unit/**/import_spec.js'
-                ]
-            },
-
-            storage: {
-                src: ['core/test/unit/**/storage*_spec.js']
+                src: ['test/unit/**/server*_spec.js']
             },
 
             // #### All Integration tests
             integration: {
                 src: [
-                    'core/test/integration/**/model*_spec.js',
-                    'core/test/integration/**/api*_spec.js',
-                    'core/test/integration/*_spec.js'
+                    'test/integration/**/model*_spec.js',
+                    'test/integration/**/api*_spec.js',
+                    'test/integration/*_spec.js'
                 ]
             },
 
             // ##### Model integration tests
             model: {
-                src: ['core/test/integration/**/model*_spec.js']
+                src: ['test/integration/**/model*_spec.js']
             },
 
             // ##### API integration tests
             api: {
-                src: ['core/test/integration/**/api*_spec.js']
+                src: ['test/integration/**/api*_spec.js']
             },
 
             // #### All Route tests
             routes: {
-                src: ['core/test/functional/routes/**/*_test.js']
+                src: ['test/functional/routes/**/*_test.js']
             }
         },
 
@@ -170,16 +143,16 @@ configureGrunt = function (grunt) {
         // Command line tools where it's easier to run a command directly than configure a grunt plugin
         shell: {
             prepare_ext: {
-                command: "git clone http://git.candylee.cn/doomdagger/ext.git ./ext",
+                command: "git clone http://git.candylee.cn/doomdagger/ext.git ./client/ext",
                 options: {
                     stdout: true
                 }
             },
-            // #### Run Sencha Touch Build
+            // #### Run Sencha Ext JS Build
             // See the `grunt init`. See the section on [Building Assets](#building%20assets) for more
-            touch: {
+            ext: {
                 command: [
-                    'cd ./core/client/',
+                    'cd ./client/',
                     'sencha app build'
                 ].join('&&'),
                 options: {
@@ -202,7 +175,7 @@ configureGrunt = function (grunt) {
                     // **Note:** will only work on windows if mocha is globally installed
                     var cmd = !!process.platform.match(/^win/) ? 'mocha' : './node_modules/mocha/bin/mocha';
                     return cmd +
-                        ' --timeout 15000 --reporter html-cov > coverage.html ./core/test/blanket_coverage.js';
+                        ' --timeout 15000 --reporter html-cov > coverage.html ./test/blanket_coverage.js';
                 },
                 execOptions: {
                     env: 'NODE_ENV=' + process.env.NODE_ENV
@@ -220,7 +193,7 @@ configureGrunt = function (grunt) {
                 options: {
                     onlyUpdated: true,
                     exclude: 'node_modules,.git,.tmp,bower_components,content,*built,*test,*doc*,*vendor,' +
-                        'config.js,coverage.html,.travis.yml,*.min.css,screen.css,*touch*,*resources*,*.sencha*',
+                        'config.js,coverage.html,.travis.yml,*.min.css,screen.css,*ext*,*resources*,*.sencha*',
                     extras: ['fileSearch']
                 }
             }
@@ -230,51 +203,20 @@ configureGrunt = function (grunt) {
         // Clean up files as part of other tasks
         clean: {
             built: {
-                src: ['core/built/**']
-            },
-            release: {
-                src: ['<%= paths.releaseBuild %>/**']
-            },
-            test: {
-                src: ['content/data/iCollege-test.db']
+                src: ['built/**']
             },
             tmp: {
                 src: ['.tmp/**']
             }
         },
 
-        // ### grunt-contrib-copy
-        // Copy files into their correct locations as part of building assets, or creating release zips
-        copy: {
-            release: {
-                files: [{
-                    cwd: 'core/client/build/production/ICollege/',
-                    src: ['**'],
-                    dest: '<%= paths.releaseBuild %>/core/client/',
-                    expand: true
-                }]
-            }
-        },
-
-        // ### grunt-contrib-compress
-        // Zip up files for builds / releases
-        compress: {
-            release: {
-                options: {
-                    archive: '<%= paths.releaseDist %>/iCollege-<%= pkg.version %>.zip'
-                },
-                expand: true,
-                cwd: '<%= paths.releaseBuild %>/',
-                src: ['**']
-            }
-        },
 
         // ### grunt-contrib-concat
         // concatenate multiple JS files into a single file ready for use
         concat: {
             dev: {
                 files: {
-                    'core/built/scripts/vendor.js': [
+                    'client/vendor/scripts.js': [
                         'bower_components/jquery/dist/jquery.js',
                         'bower_components/lodash/dist/lodash.underscore.js',
                         'bower_components/moment/moment.js',
@@ -291,7 +233,7 @@ configureGrunt = function (grunt) {
         uglify: {
             prod: {
                 files: {
-                    'core/built/scripts/vendor.min.js': 'core/built/scripts/vendor.js'
+                    'client/vendor/scripts.min.js': 'client/vendor/scripts.js'
                 }
             }
         },
@@ -314,55 +256,6 @@ configureGrunt = function (grunt) {
     // 加载任务配置
     grunt.initConfig(cfg);
 
-    // ## Utilities
-    //
-    // ### Spawn Casper.js
-    // Custom test runner for our Casper.js functional tests
-    // This really ought to be refactored into a separate grunt task module
-    grunt.registerTask('spawnCasperJS', function (target) {
-
-        target = _.contains(['client'], target) ? target + '/' : undefined;
-
-        var done = this.async(),
-            options = ['host', 'noPort', 'port'],
-            args = ['test']
-                .concat(grunt.option('target') || target || ['client/'])
-                .concat(['--includes=base.js', '--log-level=debug', '--port=1222']);
-
-        // Forward parameters from grunt to casperjs
-        _.each(options, function processOption(option) {
-            if (grunt.option(option)) {
-                args.push('--' + option + '=' + grunt.option(option));
-            }
-        });
-
-        if (grunt.option('fail-fast')) {
-            args.push('--fail-fast');
-        }
-
-        // Show concise logs in Travis as ours are getting too long
-        if (grunt.option('concise')) {
-            args.push('--concise');
-        } else {
-            args.push('--verbose');
-        }
-
-        grunt.util.spawn({
-            cmd: 'casperjs',
-            args: args,
-            opts: {
-                cwd: path.resolve('core/test/functional'),
-                stdio: 'inherit'
-            }
-        }, function (error, result/*, code*/) {
-            /*jshint unused:false*/
-            if (error) {
-                grunt.fail.fatal(result.stdout);
-            }
-            grunt.log.writeln(result.stdout);
-            done();
-        });
-    });
 
     // # Custom Tasks
 
@@ -403,27 +296,12 @@ configureGrunt = function (grunt) {
     // This ensures that the tests get run under the correct environment, using the correct database, and
     // that they work as expected. Trying to run tests with no ENV set will throw an error to do with `client`.
     grunt.registerTask('setTestEnv',
-        'Use "testing" iCollege config',
+        'Use "testing" iDesktop config',
         function () {
             process.env.NODE_ENV = 'testing';
             cfg.express.test.options.node_env = process.env.NODE_ENV;
         });
 
-    // #### Load Config *(Utility Task)*
-    // Make sure that we have a `config.js` file when running tests
-    // iCollege requires a `config.js` file to specify the database settings etc. iCollege comes with an example file:
-    // `config.example.js` which is copied and renamed to `config.js` by the bootstrap process
-    grunt.registerTask('loadConfig', function () {
-        var done = this.async();
-        bootstrap(
-            // give me your config.js path
-            path.resolve(__dirname, 'config.js')
-        ).then(function () {
-                done();
-            }).catch(function (err) {
-                grunt.fail.fatal(err.stack);
-            });
-    });
 
     // ### Validate
     // **Main testing task**
@@ -436,7 +314,7 @@ configureGrunt = function (grunt) {
     //
     // `grunt validate` is called by `npm test`.
     grunt.registerTask('validate', 'Run tests and lint code',
-        ['jshint', 'test-routes', 'test-unit', 'test-integration', 'test-functional']);
+        ['jshint', 'test-routes', 'test-unit', 'test-integration']);
 
     // ### Unit Tests *(sub task)*
     // `grunt test-unit` will run just the unit tests
@@ -456,7 +334,7 @@ configureGrunt = function (grunt) {
     // Unit tests do **not** touch the database.
     // A coverage report can be generated for these tests using the `grunt test-coverage` task.
     grunt.registerTask('test-unit', 'Run unit tests (mocha)',
-        ['clean:test', 'setTestEnv', 'loadConfig', 'mochacli:unit']);
+        ['clean', 'setTestEnv', 'mochacli:unit']);
 
     // ### Integration tests *(sub task)*
     // `grunt test-integration` will run just the integration tests
@@ -479,7 +357,7 @@ configureGrunt = function (grunt) {
     //
     // A coverage report can be generated for these tests using the `grunt test-coverage` task.
     grunt.registerTask('test-integration', 'Run integration tests (mocha + db access)',
-        ['clean:test', 'setTestEnv', 'loadConfig', 'mochacli:integration']);
+        ['clean', 'setTestEnv', 'mochacli:integration']);
 
     // ### Route tests *(sub task)*
     // `grunt test-routes` will run just the route tests
@@ -500,30 +378,8 @@ configureGrunt = function (grunt) {
     // are working as expected, including checking the headers and status codes received. It is very easy and
     // quick to test many permutations of routes / urls in the system.
     grunt.registerTask('test-routes', 'Run functional route tests (mocha)',
-        ['clean:test', 'setTestEnv', 'loadConfig', 'mochacli:routes']);
+        ['clean', 'setTestEnv', 'mochacli:routes']);
 
-    // ### Functional tests *(sub task)*
-    //
-    // `grunt test-functional` will run just the functional tests
-    //
-    // You can use the `--target` argument to run any individual test file, or the admin or frontend tests:
-    //
-    // `grunt test-functional --target=admin/editor_test.js` - run just the editor tests
-    //
-    // `grunt test-functional --target=admin/` - run all of the tests in the admin directory
-    //
-    // Functional tests are run with [phantom.js](http://phantomjs.org/) and defined using the testing api from
-    // [casper.js](http://docs.casperjs.org/en/latest/testing.html).
-    //
-    // An express server is started with the testing environment set, and then a headless phantom.js browser is
-    // used to make requests to that server. The Casper.js API then allows us to describe the elements and
-    // interactions we expect to appear on the page.
-    //
-    // The purpose of the functional tests is to ensure that Ghost is working as is expected from a user perspective
-    // including buttons and other important interactions in the admin UI.
-    grunt.registerTask('test-functional', 'Run functional interface tests (CasperJS)',
-        ['clean:test', 'setTestEnv', 'loadConfig', 'express:test', 'spawnCasperJS', 'express:test:stop']
-    );
 
     // ### Coverage
     // `grunt test-coverage` will generate a report for the Unit and Integration Tests.
@@ -535,7 +391,7 @@ configureGrunt = function (grunt) {
     //
     // Key areas for coverage are: helpers and theme elements, apps / GDK, the api and model layers.
     grunt.registerTask('test-coverage', 'Generate unit and integration (mocha) tests coverage report',
-        ['clean:test', 'setTestEnv', 'loadConfig', 'shell:coverage']);
+        ['clean', 'setTestEnv', 'shell:coverage']);
 
 
     // ## Building assets
@@ -569,7 +425,7 @@ configureGrunt = function (grunt) {
     // `bower` does have some quirks, such as not running as root. If you have problems please try running
     // `grunt init --verbose` to see if there are any errors.
     grunt.registerTask('init', 'Prepare the project for development',
-        ['shell:bower', 'update_submodules', 'shell:prepare_touch', 'default']);
+        ['shell:bower', 'update_submodules', 'shell:prepare_ext', 'default']);
 
     // ### Default asset build
     // `grunt` - default grunt task

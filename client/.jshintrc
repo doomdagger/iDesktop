@@ -1,0 +1,25 @@
+{
+    "node": false,
+    "browser": true,
+    "nomen": false,
+    "bitwise": true,
+    "curly": true,
+    "eqeqeq": true,
+    "forin": true,
+    "immed": true,
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "noempty": true,
+    "nonew": true,
+    "plusplus": true,
+    "undef": true,
+    "unused": true,
+    "trailing": true,
+    "onevar": true,
+    "white": false,
+    "globals": {
+        "Ext": true,
+        "console": true
+    }
+}

@@ -15,12 +15,12 @@ Ext.define('iDesktop.view.main.MainController', {
     alias: 'controller.main',
 
     onClickButton: function () {
-        Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
+        Ext.Msg.confirm('Confirm', 'Are you hulala?', 'onConfirm', this);
     },
 
     onConfirm: function (choice) {
         if (choice === 'yes') {
-            //
+            console.log('hulo');
         }
     }
 });

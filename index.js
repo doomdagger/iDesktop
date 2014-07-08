@@ -9,11 +9,9 @@ var express     = require('express'),
     redis       = require('redis'),
     RedisStore  = require('connect-redis')(session),
     favicon     = require('serve-favicon'),
-    path        = require('path'),
     slashes     = require('connect-slashes'),
     when        = require('when'),
     semver      = require('semver'),
-    _           = require('loDash'),
     packageInfo = require('./package.json'),
     colors      = require('colors'),
 
@@ -33,8 +31,9 @@ if (process.env.NODE_ENV === 'development') {
     require('when/monitor/console');
 }
 
-
 function iDesktopStartMessages() {
+    colors.setTheme({silly: 'rainbow'});
+
     // Tell users if their node version is not supported, and exit
     if (!semver.satisfies(process.versions.node, packageInfo.engines.node)) {
         console.log(
