@@ -20,6 +20,7 @@
     "white": false,
     "globals": {
         "Ext": true,
+        "iDesktop": true,
         "console": true
     }
 }
