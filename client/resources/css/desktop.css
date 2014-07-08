@@ -34,7 +34,7 @@
 .x-ie7 #poweredby div,
 .x-ie8 #poweredby div {
     background-image: none;
-    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/powered-by-ext-js.png', sizingMethod='scale');
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/powered-by-ext-js.png', sizingMethod='scale');
 }
 
 /*----------------------------------------------------
@@ -161,154 +161,31 @@ div.ux-taskbar div.x-toolbar {
     background-repeat: repeat;
 }
 
-
 .ux-desktop-shortcut {
-    color: #FFFFFF;
-    float: left;
     cursor: pointer;
     text-align: center;
     padding: 8px;
     margin: 8px;
-    width: 88px;
-}
-
-.ux-desktop-shortcut:hover {
-    background: url("../images/appbutton_mouseover_bg3.png?t=20111011001") no-repeat scroll 1px 0 rgba(0, 0, 0, 0);
+    width: 64px;
 }
 
 .ux-desktop-shortcut-icon {
     width: 48px;
     height: 48px;
-    cursor: pointer;
-    overflow: hidden;
-    margin: 0 auto;
     background-color: transparent;
-    background-position: center center;
     background-repeat: no-repeat;
 }
 
-.appButton_appName {
-    color: #FFFFFF;
-    cursor: pointer;
-    height: 20px;
-    margin: 8px 0 0;
-    overflow: hidden;
-    text-align: center;
+.ux-desktop-shortcut-text {
+    font: normal 10px tahoma,arial,verdana,sans-serif;
+    text-decoration: none;
+    padding-top: 5px;
+    color: white;
 }
 
-
-.appButton_appName_inner {
-    background: url("../images/portal_all_png.png?t=20111011016") no-repeat scroll -80px -560px rgba(0, 0, 0, 0);
-    display: inline-block;
-    height: 20px;
-    line-height: 18px;
-    margin: 0;
-    max-width: 78px;
-    overflow: hidden;
-    padding: 0;
-    position: relative;
-    text-indent: 10px;
-    vertical-align: middle;
-    width: auto;
+.x-view-over .ux-desktop-shortcut-text {
+    text-decoration: underline;
 }
-
-.appButton_appName_inner_right {
-    background: url("../images/portal_all_png.png?t=20111011016") no-repeat scroll -166px -560px rgba(0, 0, 0, 0);
-    display: inline-block;
-    height: 20px;
-    margin: 0;
-    padding: 0;
-    vertical-align: middle;
-    width: 10px;
-}
-
-
-.x-view-over .appButton_appName {
-
-}
-
-/*
-    Left Bar
-*/
-
-
-
-#leftBar {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 0;
-}
-
-.dock_container {
-    height: 576px;
-    left: 0;
-    margin: -320px 0 0;
-    position: absolute;
-    top: 50%;
-    width: 73px;
-}
-
-.dock_pos_left .dock_middle {
-    background: url("../images/dock_l.png?t=20111011001") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-}
-
-.dock_middle {
-    height: 566px;
-    padding-top: 10px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-.dock_container .appButton {
-    height: 58px;
-    margin: 2px 3px 2px 4px;
-    padding: 0;
-    width: 58px;
-}
-
-.appButton {
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline;
-    float: left;
-    font-size: 12px;
-    height: 88px;
-    position: relative;
-    width: 88px;
-}
-
-.appButton:hover {
-    background: url("../images/appbutton_mouseover_bg4.png?t=20111011001") no-repeat scroll center center rgba(0, 0, 0, 0);
-}
-
-
-.dock_container .appButton_appIcon, .aMg_dock_container .appButton_appIcon {
-    margin: 5px auto 0;
-}
-
-.appButton_appIcon {
-    background-position: center center;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    height: 48px;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-    width: 48px;
-}
-
-.appButton_appIconImg {
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-}
-
-
 
 
 /*----------------------------------------------------
@@ -335,22 +212,22 @@ div.ux-taskbar div.x-toolbar {
 
 .x-ie6 .accordion-shortcut {
     background-image: none;
-    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/im48x48.png', sizingMethod='scale');
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/im48x48.png', sizingMethod='scale');
 }
 
 .x-ie6 .cpu-shortcut {
     background-image: none;
-    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/statusLarge.png', sizingMethod='scale');
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/statusLarge.png', sizingMethod='scale');
 }
 
 .x-ie6 .grid-shortcut {
     background-image: none;
-    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/grid48x48.png', sizingMethod='scale');
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/grid48x48.png', sizingMethod='scale');
 }
 
 .x-ie6 .notepad-shortcut {
     background-image: none;
-    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/notepadLarge.png', sizingMethod='scale');
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/notepadLarge.png', sizingMethod='scale');
 }
 
 .video {

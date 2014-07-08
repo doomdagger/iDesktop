@@ -6,9 +6,9 @@
 Ext.application({
     name: 'iDesktop',
 
-    extend: 'iDesktop.Application',
+    extend: 'iDesktop.Application'
     
-    autoCreateViewport: 'iDesktop.view.main.Main'
+    //autoCreateViewport: 'iDesktop.view.main.Main'
 	
     //-------------------------------------------------------------------------
     // Most customizations should be made to iDesktop.Application. If you need to

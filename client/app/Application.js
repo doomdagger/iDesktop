@@ -5,8 +5,12 @@
  */
 Ext.define('iDesktop.Application', {
     extend: 'Ext.app.Application',
-    
+
     name: 'iDesktop',
+
+    requires: [
+        'iDesktop.App'
+    ],
 
     views: [
         // TODO: add views here
@@ -22,6 +26,6 @@ Ext.define('iDesktop.Application', {
     ],
     
     launch: function () {
-        // TODO - Launch the application
+        var app = new iDesktop.App();
     }
 });

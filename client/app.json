@@ -144,8 +144,7 @@
             "path": "bootstrap.css",
             "bootstrap": true
         }, {
-            "path": "resources/css/desktop.css",
-            "update": "full"
+            "path": "resources/css/desktop.css"
         }
     ],
 
