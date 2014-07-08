@@ -11,3 +11,6 @@ node_modules/
 # scripts #
 client/vendor/
 bower_components/
+
+# example #
+example/
