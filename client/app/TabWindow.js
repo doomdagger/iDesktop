@@ -43,7 +43,7 @@ Ext.define('iDesktop.TabWindow', {
                         bodyStyle: 'padding: 5px;',
 
                         items: [{
-                            title: 'Tab Text 1',
+                            title: 'Tab Text hulala',
                             header:false,
                             html : '<p>Something useful would be in here.</p>',
                             border:false
