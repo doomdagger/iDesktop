@@ -2,7 +2,6 @@ iDesktop
 ========
 [![Build Status](https://travis-ci.org/doomdagger/iDesktop.svg?branch=ext5)](https://travis-ci.org/doomdagger/iDesktop)
 [![Code Climate](https://codeclimate.com/github/doomdagger/iDesktop/badges/gpa.svg)](https://codeclimate.com/github/doomdagger/iDesktop)
-[![Test Coverage](https://codeclimate.com/github/doomdagger/iDesktop/badges/coverage.svg)](https://codeclimate.com/github/doomdagger/iDesktop)
 
 iDesktop - Based on ExtJS, use the basic Ext.ux.Desktop, extend it, refine it.
 
@@ -37,6 +36,7 @@ How to Start
 按照以下步骤，初始化项目：
 
 * `grunt init` -- download ext5 framework
+* `cd client & Sencha app update`  -- update assets build
 * use `grunt dev` while you develop iDesktop
 
 Other Grunt Tasks
