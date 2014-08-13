@@ -18,6 +18,8 @@ iDesktop是一个基于Ext JS 5的web桌面应用，为了最大限度的强调�
  - `"server"` - 服务器端代码，内包含了基于expressjs的web app，其中有路由规则定义及中间件依赖。
  - `"test"` - 测试代码，基于shouldJs以及Mocha测试框架的测试模块，额外提供了代码的coverage报告功能.
  - `"index.js"` - 项目入口文件.
+ - `"bower.json"` - bower package manager descriptor.
+ - `"package.json"` - npm package manager descriptor.
 
 Requirement
 -----------
