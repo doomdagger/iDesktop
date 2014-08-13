@@ -1,6 +1,6 @@
 iDesktop
 ========
-
+[![Build Status](https://travis-ci.org/doomdagger/iDesktop.svg?branch=ext5)](https://travis-ci.org/doomdagger/iDesktop)
 iDesktop - Based on ExtJS, use the basic Ext.ux.Desktop, extend it, refine it.
 
 Overview
