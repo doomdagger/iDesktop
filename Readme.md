@@ -42,6 +42,11 @@ Other Grunt Tasks
 * `grunt test-unit` -- 仅仅执行单元测试case
 * 更多Grunt Task参考`Gruntfile.js`
 
+Screen Cast
+-----------
+
+![1](http://git-cache.oss-cn-qingdao.aliyuncs.com/doomdagger/iDesktop/1.jpg)
+
 Who are we
 ----------
 
