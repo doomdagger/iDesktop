@@ -50,12 +50,12 @@ Other Grunt Tasks
 Screen Cast
 -----------
 
-![1](http://git-cache.oss-cn-qingdao.aliyuncs.com/doomdagger/iDesktop/1.jpg)
+![1](https://raw.githubusercontent.com/doomdagger/images/master/iDesktop/1.jpg)
 
 Who are we
 ----------
 
-**CodeHolic Team.**
+**[CodeHolic Team.](https://github.com/codeRoamer)**
 
 License
 -------
